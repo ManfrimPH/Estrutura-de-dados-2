@@ -1,0 +1,50 @@
+1;Linha Azul;Metrô;Centro
+2;Linha Verde;Metrô;Zona Sul
+3;Expresso Norte;Ônibus;Zona Norte
+4;Circular Leste;Ônibus;Zona Leste
+5;Linha Vermelha;Metrô;Zona Oeste
+6;BRT Express;Ônibus;Centro
+7;Linha Amarela;Trem;Zona Norte
+8;Transcontinental;Trem;Zona Leste
+9;Interbairros I;Ônibus;Centro
+10;Linha Prata;Metrô;Zona Sul
+11;Expresso Oeste;Ônibus;Zona Oeste
+12;Circular Sul;Ônibus;Zona Sul
+13;Linha Diamante;Trem;Zona Norte
+14;Rapidão Centro;Ônibus;Centro
+15;Linha Coral;Metrô;Zona Leste
+16;Executivo Sul;Ônibus;Zona Sul
+17;Metrô Express;Metrô;Centro
+18;Linha Esmeralda;Trem;Zona Oeste
+19;Alimentador Norte;Ônibus;Zona Norte
+20;Linha Turquesa;Metrô;Zona Leste
+21;Circular Norte;Ônibus;Zona Norte
+22;Interbairros II;Ônibus;Zona Oeste
+23;Linha Rubi;Trem;Zona Sul
+24;Expresso Leste;Ônibus;Zona Leste
+25;Linha Dourada;Metrô;Centro
+26;BRT Sul;Ônibus;Zona Sul
+27;Linha Safira;Trem;Zona Norte
+28;Executivo Oeste;Ônibus;Zona Oeste
+29;Metrô Leste;Metrô;Zona Leste
+30;Linha Perola;Trem;Centro
+31;Alimentador Sul;Ônibus;Zona Sul
+32;Circular Oeste;Ônibus;Zona Oeste
+33;Linha Bronze;Metrô;Zona Norte
+34;Expresso Centro;Ônibus;Centro
+35;Linha Cristal;Trem;Zona Leste
+36;Interbairros III;Ônibus;Zona Norte
+37;BRT Leste;Ônibus;Zona Leste
+38;Linha Platina;Metrô;Zona Oeste
+39;Executivo Norte;Ônibus;Zona Norte
+40;Metrô Sul;Metrô;Zona Sul
+41;Linha Topazio;Trem;Centro
+42;Circular Central;Ônibus;Centro
+43;Expresso Sul;Ônibus;Zona Sul
+44;Linha Granito;Metrô;Zona Leste
+45;Alimentador Oeste;Ônibus;Zona Oeste
+46;Linha Onix;Trem;Zona Norte
+47;BRT Oeste;Ônibus;Zona Oeste
+48;Executivo Leste;Ônibus;Zona Leste
+49;Metrô Norte;Metrô;Zona Norte
+50;Linha Quartzo;Trem;Zona Sul
