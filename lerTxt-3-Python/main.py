@@ -1,38 +1,50 @@
-import rodizio
-import os
+from Lista import buscarRotas
 
-def limpar_tela():
-    os.system('cls' if os.name == 'nt' else 'clear')
+class Main():
 
-def menu_principal():
-    script_dir = os.path.dirname(__file__) if "__file__" in locals() else "."
-    arquivo_rodizio_path = os.path.join(script_dir, rodizio.NOME_ARQUIVO)
+  while True:
+    x = input("""\nQuer adicio no inicio ou no fim?\t 
+                1. Inicio
+                2. Fim
+                3. Sair do codigo""")
+    
+    match int(x):
+      case 1:
+        inicio = True
+      case 2:
+        inicio = False
+      case 3:
+        break
+      case _:
+        print("Valor invalido")
+        continue
 
-    while True:
-        print("\n=== Consulta de Rodízio ===")
-        print("1 - Consultar por Dia da Semana")
-        print("2 - Sair")
-        opcao = input("Escolha uma opção: ")
+    escolha = input("""\nQual o dia da semana?\t 
+                1. Segunda-feira
+                2. Terça-feira
+                3. Quarta-feira
+                4. Quinta-feira
+                5. Sexta-feira  
+                    """)
+    escolha = int(escolha)
+    match escolha:
+      case 1: 
+        material = "Segunda-feira"
+      case 2: 
+        material = "Terça-feira"
+      case 3: 
+        material = "Quarta-feira"
+      case 4: 
+        material = "Quinta-feira"
+      case 5: 
+        material = "Sexta-feira"
+      case _: 
+        material = "Erro"
 
-        if opcao == '1':
-            limpar_tela()
-            dia_semana = input("Digite o dia da semana (ex: Segunda-feira): ")
-            if dia_semana:
-                veiculos_do_dia = rodizio.carregar_veiculos(dia_semana, arquivo_rodizio_path)
-                rodizio.exibir_veiculos(veiculos_do_dia)
-            else:
-                print("Dia da semana não pode ser vazio.")
-            input("\nPressione Enter para continuar...")
-            limpar_tela()
-        elif opcao == '2':
-            print("Saindo...")
-            break
-        else:
-            limpar_tela()
-            print("Opção inválida. Tente novamente.")
-            input("\nPressione Enter para continuar...")
-            limpar_tela()
-
-if __name__ == "__main__":
-    limpar_tela()
-    menu_principal()
+    if material != "Erro":
+        print("paia")
+        lista = buscarRotas(material,inicio)
+        for rodizio in lista:
+          rodizio.imprimir()
+        break
+  

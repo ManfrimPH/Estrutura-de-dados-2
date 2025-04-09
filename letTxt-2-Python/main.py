@@ -1,42 +1,49 @@
-# letTxt-2-Python/main.py
-import rotas
-import os
+from Lista import buscarRotas
 
-def limpar_tela():
-    os.system('cls' if os.name == 'nt' else 'clear')
+class Main():
 
-def menu_principal():
-    script_dir = os.path.dirname(__file__) if "__file__" in locals() else "."
-    arquivo_rotas_path = os.path.join(script_dir, rotas.NOME_ARQUIVO)
+  while True:
+    x = input("""\nQuer adicio no inicio ou no fim?\t 
+                1. Inicio
+                2. Fim
+                3. Sair do codigo\n""")
+    
+    match int(x):
+      case 1:
+        inicio = True
+      case 2:
+        inicio = False
+      case 3:
+        break
+      case _:
+        print("Valor invalido")
+        continue
 
-    while True:
-        print("\n=== Menu Principal ===")
-        print("1. Buscar rotas")
-        print("2. Adicionar nova rota")
-        print("3. Sair")
-        escolha = input("Escolha uma opção: ")
+    escolha = input("""\nQual o local que vc vai? ?\t 
+                1. Zona Norte
+                2. Zona Leste
+                3. Zona Oeste
+                4. Zona Sul
+                5. Centro\n""")
+    escolha = int(escolha)
+    match escolha:
+      case 1: 
+        material = "Zona Norte"
+      case 2: 
+        material = "Zona Leste"
+      case 3: 
+        material = "Zona Oeste"
+      case 4: 
+        material = "Zona Sul"
+      case 5: 
+        material = "Centro"
+      case _: 
+        material = "Erro"
 
-        if escolha == '1':
-            limpar_tela()
-            filtro = input("Digite o tipo ou região para filtrar (ou deixe em branco para todas): ")
-            lista_rotas_encontradas = rotas.carregar_rotas(filtro, arquivo_rotas_path)
-            rotas.mostrar_rotas(lista_rotas_encontradas)
-            input("\nPressione Enter para continuar...")
-            limpar_tela()
-        elif escolha == '2':
-            limpar_tela()
-            rotas.adicionar_nova_rota(arquivo_rotas_path)
-            input("\nPressione Enter para continuar...")
-            limpar_tela()
-        elif escolha == '3':
-            print("Saindo...")
-            break
-        else:
-            limpar_tela()
-            print("Opção inválida. Tente novamente.")
-            input("\nPressione Enter para continuar...")
-            limpar_tela()
-
-if __name__ == "__main__":
-    limpar_tela()
-    menu_principal() 
+    if material != "Erro":
+        print("paia")
+        lista = buscarRotas(material,inicio)
+        for rota in lista:
+          rota.imprimir()
+        break
+  
